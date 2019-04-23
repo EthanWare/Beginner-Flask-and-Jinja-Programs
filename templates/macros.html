@@ -1,0 +1,14 @@
+{% macro studentCell(student) %}
+
+    {% set starStudent = "Calvin" %}
+    <tr>
+        <td>
+            {% if student in starStudent %}
+                <div style="color:blue;">{{ student }}</div>
+            {% else %}
+                {{ student }}
+            {% endif %}
+        </td>
+    </tr>
+
+{% endmacro %}

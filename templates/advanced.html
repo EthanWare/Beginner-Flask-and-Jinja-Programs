@@ -1,0 +1,19 @@
+{% extends 'bootstrap/base.html' %}
+{% import 'macros.html' as macros %}
+
+{% block title %}Students{% endblock %}
+
+{% block navbar %}{% endblock %}
+
+{% block content %}
+    <table>
+        <tr>
+            <th style='font-size: 150%'>Students:</th>
+        </tr>
+        {% for student in students %}
+            {{ macros.studentCell(student) }}
+        {% endfor %}
+    </table>
+    <p></p>
+    <p><a href="{{ url_for('advanced') }}">Refresh the page</a></p>
+{% endblock %}
